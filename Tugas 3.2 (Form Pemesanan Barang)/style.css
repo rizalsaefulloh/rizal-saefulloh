@@ -1,0 +1,25 @@
+body{
+    background: linear-gradient(to right, #E0FFFF,#DCDCDC,#E0FFFF);
+}
+.wrap{
+    width: 100%;
+    margin: auto;
+    color: white;
+    border-radius: 10px;
+    font-family: comic sans ms;
+    background-color:rgb(202, 202, 202) ;
+}
+.container{
+    padding: 100px;
+    margin: 5;
+}
+h1{
+    text-align: center;
+}
+table{
+    margin: auto;
+    padding-bottom: 5px;
+}
+table td{
+    padding: 5px;
+}
