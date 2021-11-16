@@ -1,0 +1,35 @@
+.atas{
+    border: 1px solid black;    
+    width: 1000px;
+    height: 200px;
+    margin: auto;
+    background-color: greenyellow;
+}
+.row{   
+    width: 1000px;
+    height: 200px;
+    margin: 20px auto 0px;
+}
+
+.column{
+    height: 200px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.yellow{
+    width: 200px;
+    float: left;
+    background-color: yellow;
+}
+
+.red{
+    width: 700px;
+    float: right;
+    background-color: red;
+}
+
+.blue{
+    width: 700px;
+    float: right;
+    background-color: royalblue;
+}
