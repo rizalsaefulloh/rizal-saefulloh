@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image picker</title>
+
+    <script type="text/javascript">
+        function load() {
+            let pilih = document.getElementById('pilih').value
+            let myImage = document.getElementById("gambar")
+            myImage.src = ''
+            if (pilih == '1') {
+                myImage.src = '0.jpg'
+                alert('Ini Gambar singa')
+            } else if (pilih == '2') {
+                myImage.src =
+                    'p.jpg'
+                alert('Ini Gambar Harimau')
+            } else if (pilih == '3') {
+                myImage.src =
+                    's.png'
+                alert('Ini Gambar Gorila')
+            } else if (pilih == '4') {
+                myImage.src =
+                    'r.jpg'
+                alert('Ini Gambar kancil')
+            } else if (pilih == '5') {
+                myImage.src =
+                    'v.jpg'
+                alert('Ini Gambar Gajah')
+            } else if (pilih == '6') {
+                myImage.src = 'u.jpg'
+                alert('Ini Gambar Buaya')
+            } else if (pilih == '7') {
+                myImage.src = 't.jpeg'
+                alert('Ini Gambar monyet')
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <select style="width: 200px; height: 30px;" onchange="load()" name="" id="pilih">
+        <option value="" hidden>Pilih Gambar ....</option>
+        <option value="1">singa</option>
+        <option value="2">harimau</option>
+        <option value="3">Gorila</option>
+        <option value="4">kancil</option>
+        <option value="5">Gajah</option>
+        <option value="6">Buaya</option>
+        <option value="7">Monyet</option>
+    </select>
+
+    <div style="margin-top: 30px;">
+        <img width="30%" id="gambar" src="" alt="">
+    </div>
+</body>
+
+</html>
