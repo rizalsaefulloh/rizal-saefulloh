@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kakulator sederhana</title>
+    <script>
+        function getjumlah ()
+        {
+         var hasil;
+         var input1;
+         var input2;
+        
+         input1 = parseInt(document .
+         getElementById("txtinput1").
+         value);
+       
+         input2 = parseInt(document .
+         getElementById("txtinput2").
+         value);
+         
+         hasil = input1 + input2;
+         
+         document.getElementById("txthasil") .value = hasil;
+        }
+       </script>
+</head>
+<body style="background-color: aqua; text-align: center; margin: 50px;s">
+	<h1>Kakulator Sederhana</h1>
+      <div >
+       <label></label>
+       <input type="text" id="txtinput1"/>
+      </div>
+      <td> <b>+</b></td>
+      <div>
+       <label></label>
+       <input type="text" id="txtinput2"/>
+      </div>
+   
+      <td><b>=</b></td>
+      <div>
+       <label></label>
+       <input type="text" id="txthasil"/>
+      </div>
+      <br>
+      <div>
+       <input type="button" value="jumlah" onclick="getjumlah()"/>
+      </div>
+</body>
+</html>
