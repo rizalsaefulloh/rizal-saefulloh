@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kurs</title>
+    <script>
+        let nilai
+        let jenis
+        let hasil
+
+        function hitung() {
+            nilai = parseInt(document.getElementById('nilai').value)
+            jenis = document.getElementById('valas').value
+
+            if (jenis == '1') {
+                hasil = nilai * 14650
+            } else if (jenis == '2') {
+                hasil = nilai * 13472
+            } else if (jenis == '3') {
+                hasil = nilai * 875
+            } else if (jenis == '4') {
+                hasil = nilai * 120
+            } else if (jenis == '5') {
+                hasil = nilai * 15888
+            } else if (jenis == '6') {
+                hasil = nilai * 3592
+            } else {
+                hasil = "Error"
+            }
+
+            var number_string = hasil.toString(),
+                sisa = number_string.length % 3,
+                rupiah = number_string.substr(0, sisa),
+                ribuan = number_string.substr(sisa).match(/\d{3}/g);
+
+            if (ribuan) {
+                separator = sisa ? '.' : '';
+                rupiah += separator + ribuan.join('.');
+            }
+
+            document.getElementById('hasil').value = 'Rp.' + rupiah;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Kurs Rupiah - Mata Uang Asing</h1>
+    <table>
+        <tr>
+            <td>Masukan Nilai</td>
+            <td>Valas</td>
+            <td>Nilai Rupiah</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="nilai"></td>
+            <td>
+                <select onchange="hitung()" name="" id="valas">
+                    <option value="" hidden>--Pilih Mata Uang--</option>
+                    <option value="1">Dollar US</option>
+                </select>
+            </td>
+            <td><input type="text" id="hasil" disabled></td>
+        </tr>
+    </table>
+</body>
+
+</html>
