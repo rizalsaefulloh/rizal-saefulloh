@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BANGUN DATAR : Lingkaran</title>
+	<link rel="stylesheet" href="j.css">
+</head>
+<body>
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>Lingkarang</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Masukan nilai jari - jari</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="ipt_r"></td>
+			</tr>
+			<tr>
+				<td><button onclick="hitung()">Hitung</button></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Luas lingkaran</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="opt_luas" disabled></td>
+			</tr>
+			<tr>
+				<td>Keliling lingkarang</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="opt_keliling" disabled></td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+<script>
+            const phi = 3.14;
+        var luas;
+        var keliling;
+        var r;
+        var d;
+        function hitung() {
+            r = parseFloat(document.getElementById("ipt_r").value);
+            luas = phi * Math.pow(r,2);
+            d = 2 * r;
+            keliling = phi * d;
+            document.getElementById('opt_luas').value = luas;
+            document.getElementById('opt_keliling').value = keliling;
+        }
+</script>
+</body>
+</html>
