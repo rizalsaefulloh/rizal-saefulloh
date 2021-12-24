@@ -1,28 +1,6 @@
-.row{
-    width: 1000px;
-    height: 500px;
-    margin: auto;
 
-}
-.column{
-    border: 1px solid blue;
-    width: 200px;
-    height: 500px;
-    float: left;
-    margin-left: 40px;
-}
-.kuning{
-    background-color: yellow;
 
-}
-.merah{
-    background-color: red;
-
-}
-.hijau{
-    background-color: green;
-
-}
-.biru{
-    background-color: blue;
+table{
+    border: 1px solid black;
+    background-color: rgb(46, 138, 141);
 }
