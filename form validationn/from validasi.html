@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JSes6 | Andhika-TI13 | Form Validasi</title>
+    
+
+</head>
+
+<body>
+    <form action="" id="form-input">
+        <table>
+            <tr>
+                <td>
+                    <label for="nama">Nama Pelanggan</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="text" name="nama" id="nama" required maxlength="30">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mail">Email</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="email" name="mail" id="mail" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="jam">Jam Keberangkatan</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="time" name="jam" id="jam" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tujuan">Tujuan Keberangkatan</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="text" name="tujuan" id="tujuan" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nama">Jumlah Tiket</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <select name="tiket" id="tiket">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="data"></div>
+
+
+    <script>
+        function showData(e) {
+            const wrapper = document.getElementById('data');
+            const nama = document.getElementById('nama')
+            const email = document.getElementById('mail')
+            const jam = document.getElementById('jam')
+            const tujuan = document.getElementById('tujuan')
+            const tiket = document.getElementById('tiket')
+                // console.log(jam.value)
+
+            wrapper.innerHTML = `<table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Jam Keberangkatan</th>
+                    <th>Tujuan Keberangkatan</th>
+                    <th>Jumlah Tiket</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>${nama.value}</td>
+                    <td>${email.value}</td>
+                    <td>${jam.value}</td>
+                    <td>${tujuan.value}</td>
+                    <td>${tiket.value}</td>
+                </tr>
+            </tbody>
+        </table>`
+
+            e.preventDefault();
+        }
+
+        const form = document.getElementById('form-input');
+        form.addEventListener('submit', showData);
+    </script>
+</body>
+
+</html>
